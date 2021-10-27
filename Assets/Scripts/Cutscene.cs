@@ -12,7 +12,7 @@ public class Cutscene : MonoBehaviour
     public float movementX;
     public float movementY;
     public float movementZ;
-    public Transform player;
+    //public Transform player;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -35,10 +35,11 @@ public class Cutscene : MonoBehaviour
         
 
         
-        mainPlayer.transform.position = new Vector3(-25.49f, -2.0625f, -23.291f);
+        
         
         mainPlayer.SetActive(true);
         LampSwing.SetActive(true);
+        mainPlayer.transform.position = new Vector3(sceneCam.transform.position.x, mainPlayer.transform.position.y, sceneCam.transform.position.z);
         LampStatic.SetActive(false);
         LampAnimation.SetActive(false);    
         sceneCam.SetActive(false);

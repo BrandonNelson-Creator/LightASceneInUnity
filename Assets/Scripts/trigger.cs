@@ -11,10 +11,10 @@ public class trigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-
+        StartCoroutine(FinishCut());
         staticLights.SetActive(false);
         lightShutoff.SetActive(true);
-        StartCoroutine(FinishCut());
+        
     }
 
     IEnumerator FinishCut()
